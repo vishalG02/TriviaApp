@@ -12,11 +12,23 @@
         android:theme="@style/Theme.TriviaApp">
 
 
-        <activity android:name=".ui.activity.HistoryActivity" />
-        <activity android:name=".ui.activity.QuizActivity" />
-        <activity android:name=".ui.activity.SummaryActivity" />
+        <activity android:name=".ui.activity.HistoryActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".ui.activity.QuizActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".ui.activity.SummaryActivity"
+            android:screenOrientation="portrait"
+
+
+            />
         <activity
             android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait"
+
             android:theme="@style/SplashTheme"
 
             >
@@ -27,9 +39,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.MainActivity">
+        <activity android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait"
 
-        </activity>
+
+            />
+
+
     </application>
 
 </manifest>
