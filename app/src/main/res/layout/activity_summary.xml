@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background_small"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPink"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_background_small"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_game_sum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="#EAE3E3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_date_sum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="#EAE3E3"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_name_placeholder_sum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hello "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="#EAE3E3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_name_value_sum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="#EAE3E3"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_placeholder"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Here are the answers selected:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#EAE3E3"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/tv_question1_sum"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Who is the best cricketer in the world?"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#EAE3E3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_answer1_sum"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#EAE3E3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_question2_sum"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#EAE3E3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_answer2_sum"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#EAE3E3"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+
+        >
+
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4F0B57"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="play Again" />
+
+        <Button
+            android:id="@+id/btn_history"
+            android:layout_width="wrap_content"
+            android:backgroundTint="#4F0B57"
+            android:textSize="20sp"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HISTORY" />
+    </LinearLayout>
+
+</LinearLayout>

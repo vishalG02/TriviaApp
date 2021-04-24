@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Trivia App</string>
+    <string name="text_start">START</string>
+    <string name="text_home">Home</string>
+    <string name="text_play_again">PLAY AGAIN</string>
+    <string name="text_congratulations">Congratulations!</string>
+    <string name="text_next">NEXT</string>
+    <string name="hint_question">Question</string>
+    <string name="hint_option_a">Option A</string>
+    <string name="text_option_b">Option B</string>
+    <string name="text_option_c">Option C</string>
+    <string name="text_loading">Loading…</string>
+    <string name="text_empty_database">There isn\'t data yet!</string>
+</resources>
