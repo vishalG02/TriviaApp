@@ -8,14 +8,14 @@ import com.google.android.material.button.MaterialButton
 import com.vis.triviaapp.R
 import com.vis.triviaapp.model.Question
 import com.vis.triviaapp.repository.Repository
+import com.vis.triviaapp.viewModel.MainActivityViewModel
 import com.vis.triviaapp.viewModel.QuizViewModel
 import com.vis.triviaapp.viewModel.QuizViewModelFactory
 
 class MainActivity : AppCompatActivity() {
-    val viewModel: QuizViewModel by lazy {
-        ViewModelProviders.of(this, QuizViewModelFactory(Repository())).get(QuizViewModel::class.java)
+    val viewModel: MainActivityViewModel by lazy {
+        ViewModelProviders.of(this, QuizViewModelFactory(Repository())).get(MainActivityViewModel::class.java)
     }
-   // private val viewModel by lazy { QuizViewModel(Repository()) }
     var userId = 1
     var getUserId: Int? = null
     var questionListVariables: ArrayList<Question> = ArrayList()

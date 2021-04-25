@@ -14,14 +14,14 @@ import com.vis.triviaapp.R
 import com.vis.triviaapp.adapters.UserAdapter
 import com.vis.triviaapp.model.Response
 import com.vis.triviaapp.repository.Repository
+import com.vis.triviaapp.viewModel.HistoryViewModel
 import com.vis.triviaapp.viewModel.QuizViewModel
 import com.vis.triviaapp.viewModel.QuizViewModelFactory
 
 class HistoryActivity : AppCompatActivity() {
-    val viewModel: QuizViewModel by lazy {
-        ViewModelProviders.of(this, QuizViewModelFactory(Repository())).get(QuizViewModel::class.java)
+    val viewModel: HistoryViewModel by lazy {
+        ViewModelProviders.of(this, QuizViewModelFactory(Repository())).get(HistoryViewModel::class.java)
     }
-    //private val viewModel by lazy { QuizViewModel(Repository()) }
     private lateinit var adapter: UserAdapter
 
     val recyclerView by lazy {

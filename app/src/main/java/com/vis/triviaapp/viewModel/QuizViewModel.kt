@@ -11,23 +11,10 @@ class QuizViewModel(private val repository: QuizRepository) :
     ViewModel() {
 
 
-    fun insertQuestionsIntoDb(question: List<Question>) = repository.insertAllQuestion(question)
-
     fun insertResponseIntoDb(response: List<Response>) = repository.insertAllResponse(response)
-
-    fun getAllResponse() = repository.getAllResponses()
 
 
     fun getAllQuestions() = repository.getAllQuestions()
-    fun getResponseById(userId: Int) = repository.getResponseById(userId)
-    private val responses = MutableLiveData<List<Response>>()
-
-
-    fun getResponses(): MutableLiveData<List<Response>> {
-        responses.postValue(repository.getAllResponses())
-        return responses
-    }
-
 
 
 }

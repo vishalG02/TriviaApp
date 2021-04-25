@@ -13,12 +13,12 @@ import com.vis.triviaapp.model.Response
 import com.vis.triviaapp.repository.Repository
 import com.vis.triviaapp.viewModel.QuizViewModel
 import com.vis.triviaapp.viewModel.QuizViewModelFactory
+import com.vis.triviaapp.viewModel.SummaryViewModel
 
 class SummaryActivity : AppCompatActivity() {
-    val viewModel: QuizViewModel by lazy {
-        ViewModelProviders.of(this, QuizViewModelFactory(Repository())).get(QuizViewModel::class.java)
+    val viewModel: SummaryViewModel by lazy {
+        ViewModelProviders.of(this, QuizViewModelFactory(Repository())).get(SummaryViewModel::class.java)
     }
-   // private val viewModel by lazy { QuizViewModel(Repository()) }
     var responseDetails: Response = Response()
     var allresponseDetails: ArrayList<Response> = ArrayList()
 
@@ -65,7 +65,6 @@ class SummaryActivity : AppCompatActivity() {
         val userId: Int = intent.getIntExtra("id", 0)
 
         responseDetails = viewModel.getResponseById(userId)
-        allresponseDetails = viewModel.getAllResponse() as ArrayList<Response>
         btnfinish.setOnClickListener(
             {
                 val mainIntent = Intent(this, MainActivity::class.java)
