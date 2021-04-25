@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.button.MaterialButton
 import com.vis.triviaapp.R
 import com.vis.triviaapp.model.Question
@@ -12,15 +13,18 @@ import com.vis.triviaapp.model.QuestionAndResponse
 import com.vis.triviaapp.model.Response
 import com.vis.triviaapp.repository.Repository
 import com.vis.triviaapp.viewModel.QuizViewModel
+import com.vis.triviaapp.viewModel.QuizViewModelFactory
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
 
 class QuizActivity : AppCompatActivity() {
-    private val viewModel by lazy { QuizViewModel(Repository()) }
+    //private val viewModel by lazy { QuizViewModel(Repository()) }
 
-
+    val viewModel: QuizViewModel by lazy {
+        ViewModelProviders.of(this, QuizViewModelFactory(Repository())).get(QuizViewModel::class.java)
+    }
     var questionListVariables: List<Question> = ArrayList()
     var responseListVariables: ArrayList<Response> = ArrayList()
     var questionAndresponseListVariables: ArrayList<QuestionAndResponse> = ArrayList()
