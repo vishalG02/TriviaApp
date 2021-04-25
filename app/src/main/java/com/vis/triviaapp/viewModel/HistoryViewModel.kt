@@ -9,9 +9,12 @@ class HistoryViewModel(private val repository: QuizRepository): ViewModel()  {
 
     private val responses = MutableLiveData<List<Response>>()
 
+    init{
+        responses.postValue(repository.getAllResponses())
+    }
+
 
     fun getResponses(): MutableLiveData<List<Response>> {
-        responses.postValue(repository.getAllResponses())
         return responses
     }
 }
