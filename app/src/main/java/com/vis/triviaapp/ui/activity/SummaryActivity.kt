@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.vis.triviaapp.R
 import com.vis.triviaapp.model.QuestionAndResponse
@@ -17,7 +18,7 @@ import com.vis.triviaapp.viewModel.SummaryViewModel
 
 class SummaryActivity : AppCompatActivity() {
     val viewModel: SummaryViewModel by lazy {
-        ViewModelProviders.of(this, QuizViewModelFactory(Repository())).get(SummaryViewModel::class.java)
+        ViewModelProvider(this, QuizViewModelFactory(Repository())).get(SummaryViewModel::class.java)
     }
     var responseDetails: Response = Response()
     var allresponseDetails: ArrayList<Response> = ArrayList()

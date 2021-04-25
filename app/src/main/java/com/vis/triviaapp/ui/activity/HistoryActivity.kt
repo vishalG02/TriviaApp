@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,7 +21,7 @@ import com.vis.triviaapp.viewModel.QuizViewModelFactory
 
 class HistoryActivity : AppCompatActivity() {
     val viewModel: HistoryViewModel by lazy {
-        ViewModelProviders.of(this, QuizViewModelFactory(Repository())).get(HistoryViewModel::class.java)
+        ViewModelProvider(this, QuizViewModelFactory(Repository())).get(HistoryViewModel::class.java)
     }
     private lateinit var adapter: UserAdapter
 

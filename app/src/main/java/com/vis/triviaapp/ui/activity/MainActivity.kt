@@ -3,6 +3,7 @@ package com.vis.triviaapp.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.button.MaterialButton
 import com.vis.triviaapp.R
@@ -14,7 +15,7 @@ import com.vis.triviaapp.viewModel.QuizViewModelFactory
 
 class MainActivity : AppCompatActivity() {
     val viewModel: MainActivityViewModel by lazy {
-        ViewModelProviders.of(this, QuizViewModelFactory(Repository())).get(MainActivityViewModel::class.java)
+        ViewModelProvider(this, QuizViewModelFactory(Repository())).get(MainActivityViewModel::class.java)
     }
     var userId = 1
     var getUserId: Int? = null

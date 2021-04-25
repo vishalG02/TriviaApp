@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.button.MaterialButton
 import com.vis.triviaapp.R
@@ -23,7 +24,7 @@ class QuizActivity : AppCompatActivity() {
     //private val viewModel by lazy { QuizViewModel(Repository()) }
 
     val viewModel: QuizViewModel by lazy {
-        ViewModelProviders.of(this, QuizViewModelFactory(Repository())).get(QuizViewModel::class.java)
+        ViewModelProvider(this, QuizViewModelFactory(Repository())).get(QuizViewModel::class.java)
     }
     var questionListVariables: List<Question> = ArrayList()
     var responseListVariables: ArrayList<Response> = ArrayList()
